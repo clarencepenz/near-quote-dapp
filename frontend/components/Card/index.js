@@ -19,7 +19,7 @@ export default function CardContainer({
   loading,
   tipAuthor,
   deleteQuote,
-  refresh
+  refresh,
 }) {
   return (
     <Card
@@ -68,10 +68,8 @@ export default function CardContainer({
               {item.tip_count} Tips
             </Badge>
           </Box>
-          <Button onClick={tipAuthor} bg="blue" color="#fff">
-            Tip 1NEAR
-          </Button>
-          {author === item.author && (
+
+          {author === item.author ? (
             <DeleteModal
               text={item.text}
               deleteQuote={deleteQuote}
@@ -79,6 +77,10 @@ export default function CardContainer({
               isLoading={loading}
               refresh={refresh}
             />
+          ) : (
+            <Button onClick={tipAuthor} bg="blue" color="#fff">
+              Tip 1NEAR
+            </Button>
           )}
         </CardFooter>
       </Stack>
