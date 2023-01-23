@@ -21,7 +21,6 @@ import AddQuote from "./components/AddQuote";
 import Login from "./components/Login";
 
 export default function App() {
-  // use React Hooks to store greeting in component state
   const [data, setData] = useState([]);
   const [totalQuotes, setTotalQuotes] = useState(0);
   const [quote, setQuote] = useState("");
@@ -33,7 +32,6 @@ export default function App() {
   const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
-    // get_greeting is in near/utils.js
     fetch_quotes({ from_index: "0", limit: 20 }).then((res) => {
       setData(res);
     });
