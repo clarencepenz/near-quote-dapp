@@ -19,7 +19,7 @@ export default function Login({ login }) {
         src="https://www.pngall.com/wp-content/uploads/13/NFT-Art-PNG.png"
         w="auto"
         h={{base: "auto", md: "400px"}}
-        my="6rem"
+        my="2rem"
       />
       <Button onClick={login} color="#fff" bg="green" w="200px">
         Connect
